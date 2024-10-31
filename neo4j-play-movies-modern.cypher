@@ -92,7 +92,9 @@ CREATE
 (Taylor)-[:DIRECTED {id: randomUuid()}]->(TheDevilsAdvocate)
 
 CREATE (AFewGoodMen:Movie {id: "a few good men", title:"A Few Good Men", released: date({year: 1992}), tagline:"In the heart of the nation's capital, in a courthouse of the U.S. government, one man will stop at nothing to keep his honor, and one will stop at nothing to find the truth."})
-CREATE (TomC:Person {id: "tom cruise", name: "Tom Cruise", born: date({year: 1962})})
+CREATE (TomC:Person {id: "tom cruise", name: "Tom Cruise", born: date({year: 1962, month: 7, day: 3})})
+SET TomC.bornIn = 'Syracuse, New York, USA'
+SET TomC.bornPosition = point({latitude: 43.0481, longitude: -76.1474})
 CREATE (JackN:Person {id: "jack nicholson", name: "Jack Nicholson", born: date({year: 1937})})
 CREATE (DemiM:Person {id: "demi moore", name: "Demi Moore", born: date({year: 1962})})
 CREATE (KevinB:Person {id: "kevin bacon", name: "Kevin Bacon", born: date({year: 1958})})
@@ -122,11 +124,21 @@ CREATE
 (AaronS)-[:WROTE {id: randomUuid()}]->(AFewGoodMen)
 
 CREATE (TopGun:Movie {id: "top gun", title:"Top Gun", released: date({year: 1986}), tagline:'I feel the need, the need for speed.'})
-CREATE (KellyM:Person {id: "kelly mcgillis", name: "Kelly McGillis", born: date({year: 1957})})
-CREATE (ValK:Person {id: "val kilmer", name: "Val Kilmer", born: date({year: 1959})})
-CREATE (AnthonyE:Person {id: "anthony edwards", name: "Anthony Edwards", born: date({year: 1962})})
-CREATE (TomS:Person {id: "tom skerritt", name: "Tom Skerritt", born: date({year: 1933})})
+CREATE (KellyM:Person {id: "kelly mcgillis", name: "Kelly McGillis", born: date({year: 1957, month: 7, day: 9})})
+SET KellyM.bornIn = 'Newport Beach, California, USA'
+SET KellyM.bornPosition = point({latitude: 33.6189, longitude: -117.9298})
+CREATE (ValK:Person {id: "val kilmer", name: "Val Kilmer", born: date({year: 1959, month: 12, day: 31})})
+SET ValK.bornIn = 'Los Angeles, California, USA'
+SET ValK.bornPosition = point({latitude: 34.0522, longitude: -118.2437})
+CREATE (AnthonyE:Person {id: "anthony edwards", name: "Anthony Edwards", born: date({year: 1962, month: 7, day: 19})})
+SET AnthonyE.bornIn = 'Santa Barbara, California, USA'
+SET AnthonyE.bornPosition = point({latitude: 34.4208, longitude: -119.6982})
+CREATE (TomS:Person {id: "tom skerritt", name: "Tom Skerritt", born: date({year: 1933, month: 8, day: 25})})
+SET TomS.bornIn = 'Detroit, Michigan, USA'
+SET TomS.bornPosition = point({latitude: 42.3314, longitude: -83.0458})
 CREATE (MegR:Person {id: "meg ryan", name: "Meg Ryan", born: date({year: 1961})})
+SET MegR.bornIn = 'Fairfield, Connecticut, USA'
+SET MegR.bornPosition = point({latitude: 41.1415, longitude: -73.2637})
 CREATE (TonyS:Person {id: "tony scott", name: "Tony Scott", born: date({year: 1944})})
 CREATE (JimC:Person {id: "jim cash", name: "Jim Cash", born: date({year: 1941})})
 CREATE
