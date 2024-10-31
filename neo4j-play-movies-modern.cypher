@@ -34,16 +34,16 @@ CREATE CONSTRAINT type_acted_in_roles IF NOT EXISTS FOR ()-[r:ACTED_IN]-() REQUI
 // Generate graph
 
 CREATE (TheMatrix:Movie {id: "the matrix", title:"The Matrix", released: date({year: 1999}), tagline:'Welcome to the Real World'})
-CREATE (Keanu:Person {id: "keanu reeves", name: "Keanu Reeves", born: date({year: 1964})})
+CREATE (Keanu:Person {id: "keanu reeves", name: "Keanu Reeves", born: date({year: 1964, month: 9, day: 2})})
 SET Keanu.bornIn = 'Beirut, Lebanon'
 SET Keanu.bornPosition = point({latitude: 33.8938, longitude: 35.5018})
-CREATE (Carrie:Person {id: "carrie-anne moss", name: "Carrie-Anne Moss", born: date({year: 1967})})
+CREATE (Carrie:Person {id: "carrie-anne moss", name: "Carrie-Anne Moss", born: date({year: 1967, month: 8, day: 21})})
 SET Carrie.bornIn = 'Burnaby, British Columbia, Canada'
-SET Carrie.bornPosition = point({latitude: 49.2488, longitude: 122.9805})
-CREATE (Laurence:Person {id: "laurence fishburne", name: "Laurence Fishburne", born: date({year: 1961})})
+SET Carrie.bornPosition = point({latitude: 49.2488, longitude: -122.9805})
+CREATE (Laurence:Person {id: "laurence fishburne", name: "Laurence Fishburne", born: date({year: 1961, month: 7, day: 30})})
 SET Laurence.bornIn = 'Augusta, Georgia, USA'
-SET Laurence.bornPosition = point({latitude: 33.4735, longitude: 82.0105})
-CREATE (Hugo:Person {id: "hugo weaving", name: "Hugo Weaving", born: date({year: 1960})})
+SET Laurence.bornPosition = point({latitude: 33.4735, longitude: -82.0105})
+CREATE (Hugo:Person {id: "hugo weaving", name: "Hugo Weaving", born: date({year: 1960, month: 4, day: 4})})
 SET Hugo.bornIn = 'Ibadan, Nigeria'
 SET Hugo.bornPosition = point({latitude: 7.3775, longitude: 3.9470})
 CREATE (LillyW:Person {id: "lilly wachowski", name: "Lilly Wachowski", born: date({year: 1967})})
